@@ -5,7 +5,7 @@ body {
 
 @import "twitter/bootstrap/responsive";
 // to fix the navbar centering
-.navbar-inner .container {width:500px;}
+.navbar-inner .container {width:700px;}
 
 
 body,html{
@@ -19,6 +19,40 @@ body,html{
  margin-top:-40px;
  color:#fff;
 }
+
+// navbar
+.brand {
+  // Vertically center the text given $navbarHeight
+  @elementHeight: 20px;
+  padding: ((@navbarHeight - @elementHeight) / 2 - 2) 20px ((@navbarHeight - @elementHeight) / 2 + 2);
+  font-size: 18px;
+  line-height: 1;
+}
+.navbar .nav > li > a {
+  @elementHeight: 10px;
+  padding: ((@navbarHeight - @elementHeight) / 2 - 1) 10px ((@navbarHeight - @elementHeight) / 2 + 1);
+  line-height: 17px;
+}
+//make navbar taller
+@navbarHeight: 50px;
+
+//make navbar link text 18px
+.navbar-inner {
+    font-size: 20px;
+}
+
+//make navbar brand text 36px
+.navbar .brand {
+    font-size: 28px;
+}
+
+.navbar .fb {
+   @elementHeight: 30px;
+  padding: ((@navbarHeight - @elementHeight) / 2 - 2) 20px ((@navbarHeight - @elementHeight) / 2 + 2);
+  font-size: 18px;
+  line-height: 1;
+}
+
 
 // Set the correct sprite paths
 @iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
